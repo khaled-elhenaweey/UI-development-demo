@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e4e8;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e0e4e8;
+            padding-bottom: 8px;
+        }
+
+        .example {
+            padding: 15px;
+            border-radius: 6px;
+            background-color: #f9fbfd;
+            color: #34495e;
+            margin-top: 10px;
+        }
+
+        /* Selector Styles */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        p,
+        a,
+        ul,
+        li {
+            padding: 8px;
+            margin: 0;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Type Selector */
+        p {
+            background-color: #f4a0e3 !important;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #dfe9f3;
+            color: #1a5276;
+        }
+
+        /* ID Selector */
+        #unique {
+            background-color: #d6eaf8;
+            color: #154360;
+        }
+
+        /* Attribute Selector */
+        [data-type="special"] {
+            background-color: #e8f6f3;
+            color: #117864;
+        }
+
+        /* Descendant Selector */
+        .container p {
+            background-color: #f4f6f7;
+            color: #626567;
+        }
+
+        /* Child Selector */
+        .parent>.child {
+            background-color: #ebf5fb;
+            color: #1f618d;
+        }
+
+        /* Adjacent Sibling Selector */
+        h3+p {
+            background-color: #f7f7f8;
+            color: #566573;
+        }
+
+        /* General Sibling Selector */
+        h4~p {
+            background-color: #fcf3cf !important;
+            color: #7d6608;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors Demo</h1>
+
+    <!-- Universal Selector -->
+    <div class="card">
+        <h2>* (Universal Selector)</h2>
+        <div class="example">Every element is affected by the universal selector.</div>
+    </div>
+
+    <!-- Type Selector -->
+    <div class="card">
+        <h2>Type Selector (e.g., `p`, `h1`)</h2>
+        <p>This paragraph is styled with a type selector for ( p ) elements.</p>
+    </div>
+
+    <!-- Class Selector -->
+    <div class="card">
+        <h2>.highlight (Class Selector)</h2>
+        <div class="example highlight">This element is styled with a class selector.</div>
+    </div>
+
+    <!-- ID Selector -->
+    <div class="card">
+        <h2>#unique (ID Selector)</h2>
+        <div class="example" id="unique">This element is styled with an ID selector.</div>
+    </div>
+
+    <!-- Attribute Selector -->
+    <div class="card">
+        <h2>[data-type="special"] (Attribute Selector)</h2>
+        <div class="example" data-type="special">This element is styled with an attribute selector.</div>
+    </div>
+
+    <!-- Descendant Selector -->
+    <div class="card">
+        <h2>.container p (Descendant Selector)</h2>
+        <div class="container">
+            <p>This paragraph is a descendant of `.container`.</p>
+            <div>
+                <p>This paragraph is a descendant of `.container`.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Child Selector -->
+    <div class="card">
+        <h2>.parent > .child (Child Selector)</h2>
+        <div class="parent">
+            <div class="example child">This element is styled with a child selector.</div>
+            <div>
+                <div class="example child">This element is styled with a child selector.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adjacent Sibling Selector -->
+    <div class="card">
+        <h2>h3 + p (Adjacent Sibling Selector)</h2>
+        <h3>This is a heading.</h3>
+        <p>This paragraph is directly after an ( h3 ) and is styled with an adjacent sibling selector.</p>
+    </div>
+
+    <!-- General Sibling Selector -->
+    <div class="card">
+        <h2>h4 ~ p (General Sibling Selector)</h2>
+        <h4>This is another heading.</h4>
+        <p>This paragraph is a sibling of an ( h4 ) and is styled with a general sibling selector.</p>
+        <p>This one too!</p>
+    </div>
+</body>
+
+</html>

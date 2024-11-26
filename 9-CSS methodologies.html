@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Methodologies Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #343a40;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #6c757d;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .methodology {
+      margin-bottom: 3rem;
+    }
+
+    .methodology h2 {
+      margin-top: 0;
+      color: #495057;
+    }
+
+    .code-snippet {
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CSS Methodologies: Comparison and Examples</h1>
+  </header>
+
+  <main>
+    <!-- BEM Section -->
+    <div class="methodology">
+      <h2>BEM (Block, Element, Modifier)</h2>
+      <p><strong>Example:</strong> A button component with BEM naming convention.</p>
+
+      <h3>CSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="button button--primary"&gt;Click Me&lt;/div&gt;<br><br>
+        /* CSS */<br>
+        .button {<br>
+          padding: 10px 20px;<br>
+          border: none;<br>
+          font-size: 16px;<br>
+        }<br>
+        .button--primary {<br>
+          background-color: #007bff;<br>
+          color: #fff;<br>
+        }
+      </code>
+      </div>
+
+      <h3>SCSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="button button--primary"&gt;Click Me&lt;/div&gt;<br><br>
+        /* SCSS */<br>
+        .button {<br>
+          padding: 10px 20px;<br>
+          border: none;<br>
+          font-size: 16px;<br>
+          &--primary {<br>
+            background-color: #007bff;<br>
+            color: #fff;<br>
+          }<br>
+        }
+      </code>
+      </div>
+    </div>
+
+    <!-- OOCSS Section -->
+    <div class="methodology">
+      <h2>OOCSS (Object-Oriented CSS)</h2>
+      <p><strong>Example:</strong> Card component with structure and skin separation.</p>
+
+      <h3>CSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="card structure skin"&gt;<br>
+          &lt;h2&gt;Title&lt;/h2&gt;<br>
+          &lt;p&gt;Content here.&lt;/p&gt;<br>
+        &lt;/div&gt;<br><br>
+        /* CSS */<br>
+        .structure {<br>
+          padding: 20px;<br>
+          border: 1px solid #ddd;<br>
+        }<br>
+        .skin {<br>
+          background-color: #f8f9fa;<br>
+          color: #343a40;<br>
+        }
+      </code>
+      </div>
+
+      <h3>SCSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="card structure skin"&gt;<br>
+          &lt;h2&gt;Title&lt;/h2&gt;<br>
+          &lt;p&gt;Content here.&lt;/p&gt;<br>
+        &lt;/div&gt;<br><br>
+        /* SCSS */<br>
+        .structure {<br>
+          padding: 20px;<br>
+          border: 1px solid #ddd;<br>
+        }<br>
+        .skin {<br>
+          background-color: #f8f9fa;<br>
+          color: #343a40;<br>
+        }
+      </code>
+      </div>
+    </div>
+
+    <!-- SMACSS Section -->
+    <div class="methodology">
+      <h2>SMACSS (Scalable and Modular Architecture for CSS)</h2>
+      <p><strong>Example:</strong> Layout and Module styles with a state class.</p>
+
+      <h3>CSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="layout-container"&gt;<br>
+          &lt;header class="module-header"&gt;Header&lt;/header&gt;<br>
+          &lt;main class="module-main state-active"&gt;Main Content&lt;/main&gt;<br>
+        &lt;/div&gt;<br><br>
+        /* CSS */<br>
+        .layout-container {<br>
+          display: flex;<br>
+          flex-direction: column;<br>
+        }<br>
+        .module-header {<br>
+          background: #343a40;<br>
+          color: white;<br>
+        }<br>
+        .state-active {<br>
+          border: 2px solid #28a745;<br>
+        }
+      </code>
+      </div>
+
+      <h3>SCSS Example:</h3>
+      <div class="code-snippet">
+        <code>
+        &lt;!-- HTML --&gt;<br>
+        &lt;div class="layout-container"&gt;<br>
+          &lt;header class="module-header"&gt;Header&lt;/header&gt;<br>
+          &lt;main class="module-main state-active"&gt;Main Content&lt;/main&gt;<br>
+        &lt;/div&gt;<br><br>
+        /* SCSS */<br>
+        .layout-container {<br>
+          display: flex;<br>
+          flex-direction: column;<br>
+        }<br>
+        .module-header {<br>
+          background: #343a40;<br>
+          color: white;<br>
+        }<br>
+        .state-active {<br>
+          border: 2px solid #28a745;<br>
+        }
+      </code>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+
+</html>

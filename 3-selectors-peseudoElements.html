@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors & Pseudo-elements Showcase</title>
+    <style>
+        /* General Page Style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f8fd;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3b3f44;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #1e88e5;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1e88e5;
+            padding-bottom: 5px;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #d3dfe8;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .example h2 {
+            font-size: 20px;
+            color: #3c4b5a;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Example-specific styling */
+        .example1::before {
+            content: "🌟 ";
+            color: #ff8a65;
+        }
+
+        .example1::after {
+            content: " 🌟";
+            color: #ff8a65;
+        }
+
+        .example2 div:nth-child(2n) {
+            background-color: #e1f5fe;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .example3 p:nth-of-type(2) {
+            background-color: #ffe0b2;
+            color: #e65100;
+            padding: 8px;
+        }
+
+        .example4 div:first-child {
+            background-color: #c8e6c9;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .example5 div:last-child {
+            background-color: #d1c4e9;
+            color: #4527a0;
+            padding: 8px;
+        }
+
+        .example6 div {
+            padding: 10px;
+            background-color: #f3e5f5;
+            transition: background-color 0.3s;
+        }
+
+        .example6 div:hover {
+            background-color: #ce93d8;
+        }
+
+        .example7 input {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #64b5f6;
+            transition: outline 0.3s;
+        }
+
+        .example7 input:focus {
+            outline: 2px solid #42a5f5;
+        }
+
+        .example8 div {
+            padding: 8px;
+            margin: 4px 0;
+            background-color: #ffccbc;
+            color: #d84315;
+        }
+
+        .example8 div:not(.exclude) {
+            background-color: #c5e1a5;
+            color: #33691e;
+        }
+
+        .example9 div {
+            padding: 10px;
+            border: 1px dashed #b0bec5;
+            margin: 4px 0;
+        }
+
+        .example9 div:empty {
+            background-color: #ffecb3;
+            height: 20px;
+        }
+
+        .example10 p::first-letter {
+            font-size: 2em;
+            color: #ffa726;
+            font-weight: bold;
+        }
+
+        .example11 p::first-line {
+            font-weight: bold;
+            color: #ff7043;
+        }
+
+        .example12 div {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #fce4ec;
+            color: #c2185b;
+        }
+
+        .example12 div:only-child {
+            background-color: #f8bbd0;
+            font-style: italic;
+        }
+
+        .example13 div:nth-last-child(2) {
+            background-color: #cfd8dc;
+            color: #455a64;
+            padding: 8px;
+        }
+
+        .example14 input[type="checkbox"]:checked+label {
+            color: #43a047;
+            font-weight: bold;
+        }
+
+        .example15 input:disabled {
+            background-color: #eceff1;
+            color: #78909c;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors & Pseudo-elements Showcase</h1>
+
+    <!-- Section Titles -->
+    <div class="section-title">Pseudo-elements Examples</div>
+
+    <!-- Example 1: ::before and ::after -->
+    <div class="example example1">
+        <h2>1. ::before and ::after Pseudo-elements</h2>
+        <p>Text with stars added before and after.</p>
+    </div>
+
+    <!-- Example 10: first-letter selector -->
+    <div class="example example10">
+        <h2>2. ::first-letter Selector</h2>
+        <p>Styled first letter of this paragraph.</p>
+    </div>
+
+    <!-- Example 11: first-line selector -->
+    <div class="example example11">
+        <h2>3. ::first-line Selector</h2>
+        <p>Styled first line of this paragraph for emphasis.</p>
+    </div>
+
+    <!-- Section Title for CSS Selectors -->
+    <div class="section-title">CSS Selectors Examples</div>
+
+    <!-- Example 2: nth-child selector -->
+    <div class="example example2">
+        <h2>4. nth-child Selector</h2>
+        <div>Item 1</div>
+        <div>Item 2 (even)</div>
+        <div>Item 3</div>
+        <div>Item 4 (even)</div>
+    </div>
+
+    <!-- Example 3: nth-of-type selector -->
+    <div class="example example3">
+        <h2>5. nth-of-type Selector</h2>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2 (styled)</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <!-- Example 4: first-child selector -->
+    <div class="example example4">
+        <h2>6. first-child Selector</h2>
+        <div>First child item</div>
+        <div>Second child item</div>
+    </div>
+
+    <!-- Example 5: last-child selector -->
+    <div class="example example5">
+        <h2>7. last-child Selector</h2>
+        <div>First item</div>
+        <div>Last item (styled)</div>
+    </div>
+
+    <!-- Example 6: hover selector -->
+    <div class="example example6">
+        <h2>8. hover Selector</h2>
+        <div>Hover over this item</div>
+    </div>
+
+    <!-- Example 7: focus selector -->
+    <div class="example example7">
+        <h2>9. focus Selector</h2>
+        <input type="text" placeholder="Click to focus">
+    </div>
+
+    <!-- Example 8: not selector -->
+    <div class="example example8">
+        <h2>10. not Selector</h2>
+        <div>This div is included in the :not rule</div>
+        <div>This div is included in the :not rule</div>
+        <div class="exclude">This div is excluded</div>
+        <div class="exclude">This div is excluded</div>
+    </div>
+
+    <!-- Example 9: empty selector -->
+    <div class="example example9">
+        <h2>11. empty Selector</h2>
+        <div>This div is not empty</div>
+        <div></div>
+    </div>
+
+    <!-- Example 12: only-child selector -->
+    <div class="example example12">
+        <h2>12. only-child Selector</h2>
+        <div>Only child item, styled when it's the only child.</div>
+    </div>
+
+    <!-- Example 13: nth-last-child selector -->
+    <div class="example example13">
+        <h2>13. nth-last-child Selector</h2>
+        <div>First item</div>
+        <div>Second last item (styled)</div>
+    </div>
+
+    <!-- Example 14: checked selector -->
+    <div class="example example14">
+        <h2>14. checked Selector</h2>
+        <input type="checkbox" id="check">
+        <label for="check">Checkbox label (changes when checked)</label>
+    </div>
+
+    <!-- Example 15: disabled selector -->
+    <div class="example example15">
+        <h2>15. disabled Selector</h2>
+        <input type="text" placeholder="This input is disabled" disabled>
+    </div>
+
+</body>
+
+</html>

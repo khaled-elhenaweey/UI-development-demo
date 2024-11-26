@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demo</title>
+    <style>
+        :root {
+            font-size: 12px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1,
+        h2 {
+            color: #4a90e2;
+        }
+
+        .example {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .example h3 {
+            margin-top: 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #e8f4fd;
+            padding: 0.5rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Units Demo</h1>
+
+    <h2>Pixel (px)</h2>
+    <div class="example">
+        <h3>Example:</h3>
+        <div style="width: 200px; height: 100px; background-color: #4a90e2;"></div>
+        <p class="highlight">This box is 200px wide and 100px tall.</p>
+    </div>
+
+    <h2>Root em (rem)</h2>
+    <div class="example">
+        <h3>Example:</h3>
+        <div style="width: 10rem; height: 5rem; background-color: #50e3c2;"></div>
+        <p class="highlight">This box is 10rem wide and 5rem tall, relative to the root font size.</p>
+    </div>
+
+    <h2>Em (em)</h2>
+    <div class="example">
+        <h3>Example:</h3>
+        <div style="font-size: 1.5em; background-color: #b8e986; padding: 1em;">
+            This text is styled using em units.
+        </div>
+        <p class="highlight">The size of this text and padding scales relative to its parent font size.</p>
+    </div>
+
+    <h2>Viewport Height (vh) and Width (vw)</h2>
+    <div class="example">
+        <h3>Example:</h3>
+        <div style="width: 50vw; height: 20vh; background-color: #f5a623;"></div>
+        <p class="highlight">This box is 50% of the viewport width and 20% of the viewport height.</p>
+    </div>
+
+    <h2>Percentage (%)</h2>
+    <div class="example">
+        <h3>Example:</h3>
+        <div style="width: 50%; height: 50px; background-color: #9013fe;"></div>
+        <p class="highlight">This box is 50% of its parent's width and has a fixed height of 50px.</p>
+    </div>
+
+    <h2>Comparison Table</h2>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+                <th>Best Use Cases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>px</td>
+                <td>Exact control, not affected by parent elements.</td>
+                <td>Not responsive or scalable.</td>
+                <td>Static elements like borders or icons.</td>
+            </tr>
+            <tr>
+                <td>rem</td>
+                <td>Scalable, consistent across the page.</td>
+                <td>Depends on the root font size.</td>
+                <td>Font sizes, spacing, responsive design.</td>
+            </tr>
+            <tr>
+                <td>em</td>
+                <td>Scales relative to parent font size.</td>
+                <td>Can become unpredictable with nested elements.</td>
+                <td>Element-specific scaling like buttons.</td>
+            </tr>
+            <tr>
+                <td>vh / vw</td>
+                <td>Responsive to viewport size.</td>
+                <td>Not ideal for fixed-size layouts.</td>
+                <td>Full-page layouts, hero sections.</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Flexible, adjusts to parent size.</td>
+                <td>Depends on parent dimensions.</td>
+                <td>Fluid layouts, relative sizing.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

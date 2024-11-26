@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Examples</title>
+    <style>
+        /* Soft color background for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4a4a8a;
+            text-align: center;
+        }
+
+        .example {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #e9eaf7;
+            min-height: 100vh;
+        }
+
+        .box {
+            background-color: #98a2d4;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Static positioning - default */
+        .static-box {
+            position: static;
+            top: 100px;
+            left: 100px;
+        }
+
+        /* Relative positioning - positioned relative to itself */
+        .relative-box {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Absolute positioning - positioned relative to the nearest positioned ancestor */
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Fixed positioning - positioned relative to the viewport */
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #8bc5e9;
+        }
+
+        /* Sticky positioning - behaves like relative until it reaches the viewport threshold */
+        .sticky-box {
+            position: sticky;
+            top: 10px;
+            background-color: #f7b7d2;
+        }
+
+        /* Centering with absolute position */
+        .centered-absolute-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+        }
+
+        /* Centering with fixed position */
+        .centered-fixed-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            background-color: #ffa07a;
+        }
+
+        /* Z-index example to show layering */
+        .z-index-box-1 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            z-index: 1;
+        }
+
+        .z-index-box-2 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            background-color: #c48dff;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Positioning Examples</h1>
+
+    <div class="example">
+        <h2>1. Static Position (Default)</h2>
+        <div class="box static-box">Static Position - No special positioning applied</div>
+    </div>
+
+    <div class="example">
+        <h2>2. Relative Position</h2>
+        <div class="box relative-box">Relative Position - Offset by 10px</div>
+    </div>
+
+    <div class="example" style="position: relative;">
+        <h2>3. Absolute Position</h2>
+        <div class="box absolute-box">Absolute Position - Positioned relative to this example box</div>
+    </div>
+
+    <div class="example">
+        <h2>4. Fixed Position</h2>
+        <div class="box fixed-box">Fixed Position - Stays at bottom-right of viewport</div>
+    </div>
+
+    <div class="example">
+        <h2>5. Sticky Position</h2>
+        <p class="sticky-box box">Sticky Position - Sticks to the top of viewport when scrolling</p>
+        <p>This text is here to demonstrate scrolling behavior.</p>
+        <p>This text is here to demonstrate scrolling behavior.</p>
+        <p>This text is here to demonstrate scrolling behavior.</p>
+    </div>
+
+    <div class="example" style="position: relative; height: 200px;">
+        <h2>6. Center Element with Absolute Position</h2>
+        <div class="box centered-absolute-box">Centered (Absolute)</div>
+    </div>
+
+    <div class="example">
+        <h2>7. Center Element with Fixed Position</h2>
+        <div class="box centered-fixed-box">Centered (Fixed)</div>
+    </div>
+
+    <div class="example" style="position: relative;">
+        <h2>8. Z-index with Absolute Position</h2>
+        <div class="box z-index-box-1">Box with z-index 1</div>
+        <div class="box z-index-box-2">Box with z-index 2</div>
+    </div>
+
+    <div class="example">
+        <h2>9. Center with Margin Auto (Horizontal only)</h2>
+        <div style="width: 50%; margin: 0 auto; background-color: #b0e57c; padding: 10px; text-align: center;">
+            Centered horizontally with <code>margin: auto</code>
+        </div>
+    </div>
+</body>
+
+</html>

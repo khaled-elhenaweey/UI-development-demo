@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display and Visibility Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6a5acd;
+        }
+
+        .box {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .inline-container {
+            background-color: #ffe0b2;
+        }
+
+        .none-container {
+            background-color: #ffcdd2;
+        }
+
+        .inline-block-container {
+            background-color: #ffe0b2;
+            display: inline-block;
+        }
+
+        .inline-flex-container {
+            display: inline-flex;
+            align-items: center;
+            background-color: #dcedc8;
+            padding: 0.5rem;
+        }
+
+        .inline-flex-container .box {
+            margin: 0;
+        }
+
+        .visibility-visible {
+            visibility: visible;
+        }
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+        .visibility-collapsed {
+            visibility: collapse;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6a5acd;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display and Visibility Examples</h1>
+
+    <!-- Block Example -->
+    <div class="container">
+        <h2>display: block</h2>
+        <p>The `block` display mode makes elements occupy the full width of their container.</p>
+        <div class="box" style="display: block;">Block Element 1</div>
+        <div class="box" style="display: block;">Block Element 2</div>
+    </div>
+
+    <!-- Inline Example -->
+    <div class="container">
+        <h2>display: inline</h2>
+        <p>The `inline` display mode allows elements to flow inline with text.</p>
+        <div class="inline-container">
+            <span class="box" style="display: inline;">Inline 1</span>
+            <span class="box" style="display: inline;">Inline 2</span>
+            <span class="box" style="display: inline;">Inline 3</span>
+        </div>
+    </div>
+
+    <!-- Inline-block Example -->
+    <div class="container">
+        <h2>display: inline-block</h2>
+        <p>The `inline-block` display mode combines `inline` and `block` behaviors, allowing elements to flow inline but
+            maintain block-level dimensions.</p>
+        <div class="inline-block-container">
+            <div class="box" style="display: inline-block;">Inline-Block 1</div>
+            <div class="box" style="display: inline-block;">Inline-Block 2</div>
+            <div class="box" style="display: inline-block;">Inline-Block 3</div>
+        </div>
+    </div>
+
+    <!-- Flex Example -->
+    <div class="container">
+        <h2>display: flex</h2>
+        <p>The `flex` display mode creates a flexible layout container.</p>
+        <div class="flex-container">
+            <div class="box">Flex 1</div>
+            <div class="box">Flex 2</div>
+            <div class="box">Flex 3</div>
+        </div>
+    </div>
+
+    <!-- Inline-flex Example -->
+    <div class="container">
+        <h2>display: inline-flex</h2>
+        <p>The `inline-flex` display mode allows flexbox layouts to flow inline with text or other elements.</p>
+        <div class="inline-flex-container">
+            <div class="box">Flex 1</div>
+            <div class="box">Flex 2</div>
+            <div class="box">Flex 3</div>
+        </div>
+    </div>
+
+    <!-- Grid Example -->
+    <div class="container">
+        <h2>display: grid</h2>
+        <p>The `grid` display mode creates a grid-based layout.</p>
+        <div class="grid-container">
+            <div class="box">Grid 1</div>
+            <div class="box">Grid 2</div>
+            <div class="box">Grid 3</div>
+            <div class="box">Grid 4</div>
+            <div class="box">Grid 5</div>
+            <div class="box">Grid 6</div>
+        </div>
+    </div>
+
+    <!-- None Example -->
+    <div class="container">
+        <h2>display: none</h2>
+        <p>The `none` display mode hides the element from the layout.</p>
+        <div class="none-container">
+            <div class="box" style="display: none;">Hidden Box</div>
+            <p>The box above is hidden using `display: none`.</p>
+        </div>
+    </div>
+
+    <!-- Visibility Example -->
+    <div class="container">
+        <h2>visibility</h2>
+        <p>The `visibility` property controls whether an element is visible, hidden, or collapses (for table elements).
+        </p>
+        <div>
+            <div class="box visibility-visible">Visible Element</div>
+            <div class="box visibility-hidden">Hidden (Still Takes Space)</div>
+            <div class="box">Collapsed (for Table Elements)</div>
+            <table class="box" style="display: table;">
+                <thead>
+                    <tr class="visibility-collapsed">
+                        <th>test</th>
+                        <th>tested</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td class="visibility-collapsed">test</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The second box is hidden using `visibility: hidden`, but it still occupies space. The third box collapses
+                as it is a table element.</p>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="container">
+        <h2>Comparison of Display and Visibility Options</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Option</th>
+                    <th>Behavior</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display</td>
+                    <td>block</td>
+                    <td>Full-width, block-level layout.</td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>inline</td>
+                    <td>Flows inline with text, no block-level behavior.</td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>inline-block</td>
+                    <td>Flows inline but retains block-level dimensions.</td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>flex</td>
+                    <td>Creates a flexible container for child elements.</td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>inline-flex</td>
+                    <td>Inline layout with flexible child alignment.</td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>visible</td>
+                    <td>Element is visible and occupies space.</td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>hidden</td>
+                    <td>Element is invisible but occupies space.</td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>collapse</td>
+                    <td>Element is hidden and collapses (for tables).</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Padding and Margin Demo -->
+    <div class="container">
+        <h2>Effect of Display Types on Padding and Margin</h2>
+        <p>
+            Different <code>display</code> types affect how <code>padding</code> and <code>margin</code> behave.
+            Below is a visual demo and an explanation table for common display types.
+        </p>
+
+        <!-- Inline Example -->
+        <h3>display: inline</h3>
+        <p>Inline elements only respect horizontal padding and margins. Vertical padding and margins don't significantly
+            affect the layout.</p>
+        <span class="box" style="display: inline; padding: 10px; margin: 10px; background-color: #ffecb3;">Inline
+            Element</span>
+        <span class="box" style="display: inline; padding: 10px; margin: 10px; background-color: #ffecb3;">Inline
+            Element</span>
+
+        <!-- Block Example -->
+        <h3>display: block</h3>
+        <p>Block elements respect both horizontal and vertical padding and margins.</p>
+        <div class="box" style="display: block; padding: 10px; margin: 10px; background-color: #c8e6c9;">Block Element
+        </div>
+        <div class="box" style="display: block; padding: 10px; margin: 10px; background-color: #c8e6c9;">Block Element
+        </div>
+
+        <!-- Inline-block Example -->
+        <h3>display: inline-block</h3>
+        <p>Inline-block elements respect padding and margins in all directions while flowing inline.</p>
+        <span class="box"
+            style="display: inline-block; padding: 10px; margin: 10px; background-color: #bbdefb;">Inline-Block</span>
+        <span class="box"
+            style="display: inline-block; padding: 10px; margin: 10px; background-color: #bbdefb;">Inline-Block</span>
+
+        <!-- Flex Example -->
+        <h3>display: flex</h3>
+        <p>Flex containers and items respect padding and margins fully. Layout behavior depends on the flex container's
+            properties.</p>
+        <div class="flex-container"
+            style="padding: 10px; margin: 10px; background-color: #ffccbc; border: 1px solid #ffab91;">
+            <div class="box" style="padding: 10px; margin: 10px;">Flex Item 1</div>
+            <div class="box" style="padding: 10px; margin: 10px;">Flex Item 2</div>
+        </div>
+
+        <!-- Grid Example -->
+        <h3>display: grid</h3>
+        <p>Grid containers and items respect padding and margins fully.</p>
+        <div class="grid-container" style="padding: 10px; margin: 10px; background-color: #d1c4e9;">
+            <div class="box" style="padding: 10px; margin: 10px;">Grid Item 1</div>
+            <div class="box" style="padding: 10px; margin: 10px;">Grid Item 2</div>
+        </div>
+
+        <!-- None Example -->
+        <h3>display: none</h3>
+        <p>Elements with <code>display: none</code> are not rendered, so padding and margin have no effect.</p>
+        <div class="box" style="display: none; padding: 10px; margin: 10px;">This element is hidden</div>
+        <p>The box above is hidden and doesn't take up space in the layout.</p>
+
+        <!-- Comparison Table -->
+        <h3>Comparison Table</h3>
+        <table border="1" cellspacing="0" cellpadding="10"
+            style="width: 100%; border-collapse: collapse; background-color: #fff;">
+            <thead style="background-color: #eceff1;">
+                <tr>
+                    <th>Display Type</th>
+                    <th>Effect on Padding</th>
+                    <th>Effect on Margin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>inline</td>
+                    <td>Horizontal only</td>
+                    <td>Horizontal only</td>
+                </tr>
+                <tr>
+                    <td>block</td>
+                    <td>Full (all directions)</td>
+                    <td>Full (all directions)</td>
+                </tr>
+                <tr>
+                    <td>inline-block</td>
+                    <td>Full (all directions)</td>
+                    <td>Full (all directions)</td>
+                </tr>
+                <tr>
+                    <td>flex</td>
+                    <td>Full (all directions)</td>
+                    <td>Full (all directions)</td>
+                </tr>
+                <tr>
+                    <td>grid</td>
+                    <td>Full (all directions)</td>
+                    <td>Full (all directions)</td>
+                </tr>
+                <tr>
+                    <td>none</td>
+                    <td>No effect (hidden)</td>
+                    <td>No effect (hidden)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

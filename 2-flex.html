@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Flexbox Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-height: fit-content !important;
+        }
+
+        .example h2 {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #eef3f7;
+            border-radius: 5px;
+            min-height: 80px;
+            align-items: center;
+        }
+
+        .item {
+            padding: 12px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 4px;
+            font-weight: bold;
+            min-width: 60px;
+        }
+
+        /* Example-specific styles */
+        .flex-row .item {
+            background-color: #ff6b6b;
+        }
+
+        .flex-column .item {
+            background-color: #ff9e80;
+        }
+
+        .flex-wrap .item {
+            background-color: #4db6ac;
+        }
+
+        .justify-center .item {
+            background-color: #64b5f6;
+        }
+
+        .justify-space-between .item {
+            background-color: #ba68c8;
+        }
+
+        .align-start .item {
+            background-color: #aed581;
+        }
+
+        .align-end .item {
+            background-color: #ffb74d;
+        }
+
+        .align-self .item-1 {
+            background-color: #f48fb1;
+        }
+
+        .align-self .item-2 {
+            background-color: #ff8a65;
+        }
+
+        .align-self .item-3 {
+            background-color: #ce93d8;
+        }
+
+        .flex-grow .item-1 {
+            background-color: #81c784;
+        }
+
+        .flex-grow .item-2 {
+            background-color: #4db6ac;
+        }
+
+        .flex-grow .item-3 {
+            background-color: #9575cd;
+        }
+
+        /* Flexbox layout classes */
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-space-between {
+            justify-content: space-between;
+        }
+
+        .align-start {
+            align-items: flex-start;
+            height: 120px;
+        }
+
+        .align-end {
+            align-items: flex-end;
+            height: 120px;
+        }
+
+        .align-self .item-1 {
+            align-self: flex-start;
+        }
+
+        .align-self .item-3 {
+            align-self: flex-end;
+        }
+
+        .flex-grow .item-1 {
+            flex: 1;
+        }
+
+        .flex-grow .item-2 {
+            flex: 2;
+        }
+
+        .flex-grow .item-3 {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interactive Flexbox Examples</h1>
+    <!-- Example 1: Flex Direction: Row -->
+    <div class="example">
+        <h2>1. Flex Direction: Row</h2>
+        <div class="flex-container flex-row">
+            <!-- Flexbox items will be laid out in a horizontal row by default -->
+            <div class="item item-1">Row 1</div>
+            <div class="item item-2">Row 2</div>
+            <div class="item item-3">Row 3</div>
+        </div>
+    </div>
+
+    <!-- Example 2: Flex Direction: Column -->
+    <div class="example">
+        <h2>2. Flex Direction: Column</h2>
+        <div class="flex-container flex-column">
+            <!-- Flexbox items will be laid out in a vertical column instead of row -->
+            <div class="item item-1">Column 1</div>
+            <div class="item item-2">Column 2</div>
+            <div class="item item-3">Column 3</div>
+        </div>
+    </div>
+
+    <!-- Example 3: Flex Wrap -->
+    <div class="example">
+        <h2>3. Flex Wrap</h2>
+        <div class="flex-container flex-wrap">
+            <!-- Flexbox will wrap items to the next line when there's not enough space -->
+            <div class="item item-1">Wrap 1</div>
+            <div class="item item-2">Wrap 2</div>
+            <div class="item item-3">Wrap 3</div>
+            <div class="item item-1">Wrap 4</div>
+            <div class="item item-2">Wrap 5</div>
+        </div>
+    </div>
+
+    <!-- Example 4: Justify Content: Center -->
+    <div class="example">
+        <h2>4. Justify Content: Center</h2>
+        <div class="flex-container justify-center">
+            <!-- Items are centered along the main axis -->
+            <div class="item item-1">Center 1</div>
+            <div class="item item-2">Center 2</div>
+        </div>
+    </div>
+
+    <!-- Example 5: Justify Content: Space Between -->
+    <div class="example">
+        <h2>5. Justify Content: Space Between</h2>
+        <div class="flex-container justify-space-between">
+            <!-- Items are evenly spaced with the first item aligned at the start and the last item at the end -->
+            <div class="item item-1">Between 1</div>
+            <div class="item item-2">Between 2</div>
+            <div class="item item-3">Between 3</div>
+        </div>
+    </div>
+
+    <!-- Example 6: Align Items: Start -->
+    <div class="example">
+        <h2>6. Align Items: Start</h2>
+        <div class="flex-container align-start">
+            <!-- Items are aligned to the start of the cross-axis (top if flex-direction is row) -->
+            <div class="item item-1">Start 1</div>
+            <div class="item item-2">Start 2</div>
+            <div class="item item-3">Start 3</div>
+        </div>
+    </div>
+
+    <!-- Example 7: Align Items: End -->
+    <div class="example">
+        <h2>7. Align Items: End</h2>
+        <div class="flex-container align-end">
+            <!-- Items are aligned to the end of the cross-axis (bottom if flex-direction is row) -->
+            <div class="item item-1">End 1</div>
+            <div class="item item-2">End 2</div>
+            <div class="item item-3">End 3</div>
+        </div>
+    </div>
+
+    <!-- Example 8: Align Self -->
+    <div class="example">
+        <h2>8. Align Self</h2>
+        <div class="flex-container align-self">
+            <!-- The second item is aligned to the start, while others follow the default align-items setting -->
+            <div class="item item-1">Self Start</div>
+            <div class="item item-2">Align Start</div>
+            <div class="item item-3">Self End</div>
+        </div>
+    </div>
+
+    <!-- Example 9: Flex Grow -->
+    <div class="example">
+        <h2>9. Flex Grow</h2>
+        <div class="flex-container flex-grow">
+            <!-- The second item will grow to take up more space than the others -->
+            <div class="item item-1">Grow 1</div>
+            <div class="item item-2">Grow 2</div>
+            <div class="item item-3">Grow 1</div>
+        </div>
+    </div>
+</body>
+
+</html>
