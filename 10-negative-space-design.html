@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negative Space Design Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .example-container {
+            margin-bottom: 3rem;
+        }
+
+        .example-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .example {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .good,
+        .bad {
+            flex: 1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .good {
+            border: 3px solid #4CAF50;
+            /* Green for good */
+            background-color: #e8f5e9;
+        }
+
+        .bad {
+            border: 3px solid #FF5252;
+            /* Red for bad */
+            background-color: #ffebee;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 96%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .good-box {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .bad-box {
+            background-color: #FF5252;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .good-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .bad-button {
+            background-color: #FF5252;
+            color: white;
+            padding: 0.3rem 0.5rem;
+            /* Bad spacing */
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item {
+            background-color: #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Negative Space Design Examples</h1>
+    <!-- Example 1: Form Design -->
+    <div class="example-container">
+        <div class="example-title">1. تصميم الفورم (Form Design)</div>
+        <p>الفورم الجيد يحتوي على مسافات متساوية حول الحقول لتوفير راحة للعين عند تعبئة البيانات. الفورم السيئ يحتوي على
+            مسافات غير متساوية تجعل العناصر تبدو مزدحمة.</p>
+        <div class="example">
+            <div class="good">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+            </div>
+            <div class="bad">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group" style="margin-top: 0;">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Example 4: Lists -->
+    <div class="example-container">
+        <div class="example-title">4. مسافات القوائم (Lists Spacing)</div>
+        <p>القائمة الجيدة تستخدم مسافات متساوية وواضحة بين العناصر. القائمة السيئة تضغط العناصر أو تجعلها متباعدة بشكل
+            مفرط.</p>
+        <div class="example">
+            <div class="good">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div class="bad">
+                <ul>
+                    <li style="margin-bottom: 0;">Item 1</li>
+                    <li style="margin-bottom: 2rem;">Item 2</li>
+                    <li style="margin-bottom: 0;">Item 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Example 5: Buttons -->
+    <div class="example-container">
+        <div class="example-title">5. أزرار غير مريحة (Buttons Design)</div>
+        <p>الأزرار الجيدة تحتوي على مسافات متساوية في جميع الاتجاهات لسهولة الضغط. الأزرار السيئة تجعل المسافات ضيقة أو
+            غير متساوية.</p>
+        <div class="example">
+            <div class="good">
+                <button class="good-button">Good Button</button>
+            </div>
+            <div class="bad">
+                <button class="bad-button">Bad Button</button>
+            </div>
+        </div>
+    </div>
+    <!-- Example 6: Grid Layout -->
+    <div class="example-container">
+        <div class="example-title">6. تصميم الشبكة (Grid Layout)</div>
+        <p>الشبكة الجيدة تحتوي على مسافات متساوية بين العناصر. الشبكة السيئة تجعل العناصر مضغوطة أو متباعدة بشكل مفرط.
+        </p>
+        <div class="example">
+            <div class="good">
+                <div class="grid">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                </div>
+            </div>
+            <div class="bad">
+                <div class="grid" style="gap: 0;">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Example 7: Overall Layout -->
+    <div class="example-container">
+        <div class="example-title">7. تخطيط الصفحة (Overall Layout)</div>
+        <p>الصفحة الجيدة تحتوي على مسافات واضحة ومريحة بين العناصر الأساسية. الصفحة السيئة تفتقر إلى التنظيم أو تجعل
+            العناصر مضغوطة.</p>
+        <div class="example">
+            <div class="good">
+                <div class="box good-box">Header</div>
+                <div class="box good-box">Content</div>
+                <div class="box good-box">Footer</div>
+            </div>
+            <div class="bad">
+                <div class="box bad-box" style="margin-bottom: 0;">Header</div>
+                <div class="box bad-box" style="margin-top: 0;">Content</div>
+                <div class="box bad-box" style="margin-top: 0;">Footer</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
