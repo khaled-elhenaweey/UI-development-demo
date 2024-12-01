@@ -1,0 +1,101 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f5;
+  color: #444;
+  text-align: center;
+}
+
+h1 {
+  color: #9eafdb;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.demo-box {
+  margin: 20px;
+  padding: 30px;
+  background-color: #9eafdb;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.demo-dark {
+  background-color: #5472bf;
+  padding: 15px;
+}
+
+.demo-light {
+  background-color: #e8ecf7;
+  padding: 15px;
+}
+
+.demo-accent {
+  background-color: #b8e0d2;
+  padding: 15px;
+}
+
+.demo-mixed {
+  background-color: #c6c6e2;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.demo-hue {
+  background-color: #ca9edb;
+  color: white;
+  padding: 15px;
+}
+
+.demo-rgba {
+  background-color: rgba(158, 175, 219, 0.6);
+  padding: 15px;
+  color: white;
+}
+
+.demo-hsla {
+  background-color: hsla(200, 100%, 70%, 0.5);
+  padding: 15px;
+  color: white;
+}
+
+.demo-invert {
+  background-color: #615024;
+  padding: 15px;
+  color: white;
+}
+
+.demo-calc {
+  background-color: #9eafdb;
+  width: calc(100% - 20px);
+  padding: 15px;
+  color: white;
+  text-align: left;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* إضافة جدول المقارنة بين الدوال */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}/*# sourceMappingURL=12-scss-style.css.map */

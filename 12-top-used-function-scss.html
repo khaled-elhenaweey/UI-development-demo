@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Functions Extended Demo</title>
+    <link rel="stylesheet" href="12-scss-style.css">
+</head>
+
+<body>
+
+    <h1>SCSS Functions Extended Demo</h1>
+
+    <!-- Example 1: Darken() -->
+    <div class="demo-box demo-dark">
+        <p>This box uses <b>darken()</b> to make the color darker.</p>
+    </div>
+    <div class="code-snippet">
+        <code>darken($base-color, 20%)</code>
+    </div>
+
+    <!-- Example 2: Lighten() -->
+    <div class="demo-box demo-light">
+        <p>This box uses <b>lighten()</b> to make the color lighter.</p>
+    </div>
+    <div class="code-snippet">
+        <code>lighten($base-color, 20%)</code>
+    </div>
+
+    <!-- Example 3: Mix() -->
+    <div class="demo-box demo-mixed">
+        <p>This box uses <b>mix()</b> to combine the colors.</p>
+    </div>
+    <div class="code-snippet">
+        <code>mix($base-color, $secondary-color, 40%)</code>
+    </div>
+
+    <!-- Example 4: Adjust Hue -->
+    <div class="demo-box demo-hue">
+        <p>This box uses <b>adjust-hue()</b> to change the hue of the color.</p>
+    </div>
+    <div class="code-snippet">
+        <code>adjust-hue($base-color, 60deg)</code>
+    </div>
+
+    <!-- Example 5: RGBA -->
+    <div class="demo-box demo-rgba">
+        <p>This box uses <b>rgba()</b> for a color with transparency.</p>
+    </div>
+    <div class="code-snippet">
+        <code>rgba($base-color, 0.6)</code>
+    </div>
+
+    <!-- Example 6: HSLA -->
+    <div class="demo-box demo-hsla">
+        <p>This box uses <b>hsla()</b> for a color with Hue, Saturation, Lightness, and Transparency.</p>
+    </div>
+    <div class="code-snippet">
+        <code>hsla(200, 100%, 70%, 0.5)</code>
+    </div>
+
+    <!-- Example 7: Invert() -->
+    <div class="demo-box demo-invert">
+        <p>This box uses <b>invert()</b> to invert the color.</p>
+    </div>
+    <div class="code-snippet">
+        <code>invert($base-color)</code>
+    </div>
+
+    <!-- Example 8: Calc() -->
+    <div class="demo-box demo-calc">
+        <p>This box uses <b>calc()</b> to calculate width dynamically.</p>
+    </div>
+    <div class="code-snippet">
+        <code>calc(100% - 20px)</code>
+    </div>
+
+    <!-- Comparison Table -->
+    <h2>Comparison Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>الدالة</th>
+                <th>الشرح</th>
+                <th>الاستخدام</th>
+                <th>المثال</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>darken()</b></td>
+                <td>تجعل اللون أغمق بنسبة معينة</td>
+                <td>لتعتيم اللون</td>
+                <td><code>darken($base-color, 20%)</code></td>
+            </tr>
+            <tr>
+                <td><b>lighten()</b></td>
+                <td>تجعل اللون أفتح بنسبة معينة</td>
+                <td>لتفتيح اللون</td>
+                <td><code>lighten($base-color, 20%)</code></td>
+            </tr>
+            <tr>
+                <td><b>mix()</b></td>
+                <td>دمج لونين معًا بنسبة معينة</td>
+                <td>دمج الألوان معًا</td>
+                <td><code>mix($base-color, $secondary-color, 40%)</code></td>
+            </tr>
+            <tr>
+                <td><b>adjust-hue()</b></td>
+                <td>تغيير درجة الـ Hue للون</td>
+                <td>لتغيير درجة اللون بدون التأثير على السطوع</td>
+                <td><code>adjust-hue($base-color, 60deg)</code></td>
+            </tr>
+            <tr>
+                <td><b>rgba()</b></td>
+                <td>إنشاء لون مع الشفافية</td>
+                <td>لإضافة شفافية للألوان</td>
+                <td><code>rgba($base-color, 0.6)</code></td>
+            </tr>
+            <tr>
+                <td><b>hsla()</b></td>
+                <td>إنشاء لون باستخدام الـ HSL مع الشفافية</td>
+                <td>لتحديد اللون باستخدام HSL والشفافية</td>
+                <td><code>hsla(200, 100%, 70%, 0.5)</code></td>
+            </tr>
+            <tr>
+                <td><b>invert()</b></td>
+                <td>عكس اللون</td>
+                <td>لعكس اللون إلى لونه المكمل</td>
+                <td><code>invert($base-color)</code></td>
+            </tr>
+            <tr>
+                <td><b>calc()</b></td>
+                <td>إجراء عمليات حسابية داخل الـ CSS</td>
+                <td>لحساب القيم الرياضية مثل العرض أو الطول</td>
+                <td><code>calc(100% - 20px)</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

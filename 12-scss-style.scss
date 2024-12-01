@@ -1,0 +1,127 @@
+// تعريف بعض الألوان الهادئة
+$base-color: #9eafdb; // لون أساسي هادئ وناعم
+$secondary-color: #e1d5e7; // لون ثانوي هادئ وأنيق
+$accent-color: #b8e0d2; // لون مكمل هادئ
+$text-color: #444; // لون النصوص الداكن
+$background-color: #f3f3f5; // لون الخلفية الفاتح
+
+// استخدام بعض الدوال لتعديل الألوان
+$dark-base-color: darken($base-color, 20%);
+$light-base-color: lighten($base-color, 20%);
+$dark-secondary-color: darken($secondary-color, 15%);
+$light-accent-color: lighten($accent-color, 10%);
+
+// دوال جديدة
+$rgba-base-color: rgba($base-color, 0.6); // إضافة الشفافية
+$hsla-base-color: hsla(200, 100%, 70%, 0.5); // استخدام الـ HSL مع الشفافية
+$inverted-color: invert($base-color); // عكس اللون
+$calculated-width: calc(100% - 20px); // حساب عرض العنصر
+
+// أسلوب عام للصفحة
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    color: $text-color;
+    text-align: center;
+}
+
+// رأس الصفحة
+h1 {
+    color: $base-color;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+// صندوق الديمو
+.demo-box {
+    margin: 20px;
+    padding: 30px;
+    background-color: $base-color;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+// استخدام الألوان المعدلة
+.demo-dark {
+    background-color: $dark-base-color;
+    padding: 15px;
+}
+
+.demo-light {
+    background-color: $light-base-color;
+    padding: 15px;
+}
+
+.demo-accent {
+    background-color: $accent-color;
+    padding: 15px;
+}
+
+// مثال على استخدام الـ mix مع ألوان
+.demo-mixed {
+    background-color: mix($base-color, $secondary-color, 40%);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+// مثال على استخدام adjust-hue لتغيير اللون
+.demo-hue {
+    background-color: adjust-hue($base-color, 60deg); // تغيير اللون بنسبة 60 درجة
+    color: white;
+    padding: 15px;
+}
+
+// إضافة الصناديق الجديدة
+.demo-rgba {
+    background-color: $rgba-base-color;
+    padding: 15px;
+    color: white;
+}
+
+.demo-hsla {
+    background-color: $hsla-base-color;
+    padding: 15px;
+    color: white;
+}
+
+.demo-invert {
+    background-color: $inverted-color;
+    padding: 15px;
+    color: white;
+}
+
+.demo-calc {
+    background-color: $base-color;
+    width: $calculated-width;
+    padding: 15px;
+    color: white;
+    text-align: left;
+}
+
+// نصوص داخل الصناديق
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* إضافة جدول المقارنة بين الدوال */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
