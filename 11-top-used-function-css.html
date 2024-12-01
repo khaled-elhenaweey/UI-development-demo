@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديمو دوال CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .example {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-title {
+            font-size: 1.2rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .example-preview {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px dashed #4CAF50;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+
+        .code-snippet {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ديمو دوال CSS</h1>
+
+    <!-- Example 1: calc() -->
+    <div class="example">
+        <div class="example-title">1. calc()</div>
+        <div class="example-preview" style="width: calc(100% - 50px);">
+            هذه الصندوق يستخدم <b>calc()</b> لتحديد عرضه.
+        </div>
+        <div class="code-snippet">
+            width: calc(100% - 50px);
+        </div>
+    </div>
+
+    <!-- Example 2: clamp() -->
+    <div class="example">
+        <div class="example-title">2. clamp()</div>
+        <div class="example-preview" style="font-size: clamp(1rem, 5vw, 2rem);">
+            هذا النص يستخدم <b>clamp()</b> لحجم الخط.
+        </div>
+        <div class="code-snippet">
+            font-size: clamp(1rem, 5vw, 2rem);
+        </div>
+    </div>
+
+    <!-- Example 3: var() -->
+    <div class="example">
+        <div class="example-title">3. var()</div>
+        <style>
+            :root {
+                --main-color: #4CAF50;
+            }
+        </style>
+        <div class="example-preview" style="color: var(--main-color);">
+            هذا النص يستخدم <b>متغير CSS</b> للون.
+        </div>
+        <div class="code-snippet">
+            :root {
+            --main-color: #4CAF50;
+            }
+            color: var(--main-color);
+        </div>
+    </div>
+
+    <!-- Example 4: linear-gradient() -->
+    <div class="example">
+        <div class="example-title">4. linear-gradient()</div>
+        <div class="example-preview"
+            style="background: linear-gradient(to right, red, blue); padding: 10px; color: white;">
+            هذا الصندوق يستخدم <b>تدرج لوني خطي</b>.
+        </div>
+        <div class="code-snippet">
+            background: linear-gradient(to right, red, blue);
+        </div>
+    </div>
+
+    <!-- Example 5: radial-gradient() -->
+    <div class="example">
+        <div class="example-title">5. radial-gradient()</div>
+        <div class="example-preview"
+            style="background: radial-gradient(circle, red, yellow, green); padding: 10px; color: white;">
+            هذا الصندوق يستخدم <b>تدرج لوني شعاعي</b>.
+        </div>
+        <div class="code-snippet">
+            background: radial-gradient(circle, red, yellow, green);
+        </div>
+    </div>
+
+    <!-- Example 6: repeating-linear-gradient() -->
+    <div class="example">
+        <div class="example-title">6. repeating-linear-gradient()</div>
+        <div class="example-preview"
+            style="background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px); padding: 10px; color: white;">
+            هذا الصندوق يستخدم <b>تدرج لوني متكرر</b>.
+        </div>
+        <div class="code-snippet">
+            background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px);
+        </div>
+    </div>
+
+    <!-- Example 7: url() -->
+    <div class="example">
+        <div class="example-title">7. url()</div>
+        <div class="example-preview"
+            style="background: url('https://via.placeholder.com/150'); padding: 50px; color: white;">
+            هذا الصندوق يستخدم <b>url()</b> لإضافة صورة خلفية.
+        </div>
+        <div class="code-snippet">
+            background: url('https://via.placeholder.com/150');
+        </div>
+    </div>
+
+    <!-- Example 8: hsl() -->
+    <div class="example">
+        <div class="example-title">8. hsl()</div>
+        <div class="example-preview" style="background: hsl(120, 50%, 50%); padding: 10px; color: white;">
+            هذا الصندوق يستخدم <b>hsl()</b> للون الخلفية.
+        </div>
+        <div class="code-snippet">
+            background: hsl(120, 50%, 50%);
+        </div>
+    </div>
+
+    <!-- Example 9: rgba() -->
+    <div class="example">
+        <div class="example-title">9. rgba()</div>
+        <div class="example-preview" style="background: rgba(255, 0, 0, 0.5); padding: 10px; color: white;">
+            هذا الصندوق يستخدم <b>rgba()</b> للتحكم في الشفافية.
+        </div>
+        <div class="code-snippet">
+            background: rgba(255, 0, 0, 0.5);
+        </div>
+    </div>
+
+    <!-- Example 10: scale() -->
+    <div class="example">
+        <div class="example-title">10. scale()</div>
+        <div class="example-preview" style="transform: scale(0.8); padding: 10px; border: 1px solid black;">
+            هذا الصندوق مُكبر باستخدام <b>scale()</b>.
+        </div>
+        <div class="code-snippet">
+            transform: scale(0.8);
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <h2>مقارنة بين دوال CSS</h2>
+    <table>
+        <tr>
+            <th>الدالة</th>
+            <th>الغرض</th>
+            <th>حالات الاستخدام</th>
+        </tr>
+        <tr>
+            <td>calc()</td>
+            <td>إجراء العمليات الحسابية على قيم الخصائص CSS.</td>
+            <td>تعديل العرض أو المسافات بشكل ديناميكي.</td>
+        </tr>
+        <tr>
+            <td>clamp()</td>
+            <td>تحديد قيمة بين الحد الأدنى والحد الأقصى.</td>
+            <td>حجم الخط المتجاوب.</td>
+        </tr>
+        <tr>
+            <td>var()</td>
+            <td>الوصول إلى خصائص CSS المخصصة (المتغيرات).</td>
+            <td>ألوان السمات أو القيم القابلة لإعادة الاستخدام.</td>
+        </tr>
+        <tr>
+            <td>linear-gradient()</td>
+            <td>إنشاء تدرجات لونية ناعمة.</td>
+            <td>الخلفيات والتأثيرات البصرية.</td>
+        </tr>
+        <tr>
+            <td>radial-gradient()</td>
+            <td>إنشاء تدرجات لونية شعاعية.</td>
+            <td>الخلفيات الدائرية أو البيضاوية.</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
