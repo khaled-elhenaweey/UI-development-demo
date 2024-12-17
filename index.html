@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الديموز</title>
+    <style>
+        /* الأساسيات */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* حاوية الكروت */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* تصميم الكارت */
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* اللينكات داخل الكروت */
+        .card a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #0078d4;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .card a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>UI Development demo for training</h1>
+    <p>click on the demo to see it have fun</p>
+
+    <div class="container">
+        <div class="card"><a href="1-positioning.html">positioning</a></div>
+        <div class="card"><a href="2-flex.html">flex</a></div>
+        <div class="card"><a href="3-selectors-peseudoElements.html">selectors pseudo Elements</a></div>
+        <div class="card"><a href="4-selectors-css.html">selectors css</a></div>
+        <div class="card"><a href="5-logical-properties.html">logical properties</a></div>
+        <div class="card"><a href="6-css-units.html">css units</a></div>
+        <div class="card"><a href="7-display.html">display</a></div>
+        <div class="card"><a href="8-font-text-prpperties.html">font & text properties</a></div>
+        <div class="card"><a href="9-CSS methodologies.html">CSS methodologies</a></div>
+        <div class="card"><a href="10-negative-space-design.html">negative space design</a></div>
+        <div class="card"><a href="11-top-used-function-css.html">top used function css </a></div>
+        <div class="card"><a href="12-top-used-function-scss.html">top used function scss</a></div>
+        <div class="card"><a href="13-new-css-properties.html">new css properties</a></div>
+    </div>
+</body>
+
+</html>
