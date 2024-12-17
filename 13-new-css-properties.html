@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح Selectors في CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            direction: rtl;
+            text-align: right;
+            background-color: #fdfdfd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .example {
+            margin-bottom: 20px;
+            border: 2px dashed #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        .example h2 {
+            color: #005f99;
+            font-size: 1.2rem;
+        }
+
+        .example div {
+            margin-bottom: 10px;
+        }
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Styling specific examples */
+        :is(h2, p) {
+            font-weight: bold !important;
+            color: #2c3e50 !important;
+        }
+
+        :where(h2, .example-title) {
+            font-style: italic;
+        }
+
+        .example:not(.highlighted) {
+            background: #eef;
+        }
+
+        div:has(> ul) {
+            border: 2px solid #2ecc71;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #2c3e50;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>شرح Selectors في CSS</h1>
+
+    <!-- Example 1: :is() -->
+    <div class="example">
+        <h2>:is() (تحديد العناصر)</h2>
+        <p>هذا الـ Selector يطبق نفس التنسيق على عدة عناصر:</p>
+        <div>مستهدف بواسطة <code>:is()</code>.</div>
+        <h2>أيضًا مستهدف بواسطة <code>:is()</code>.</h2>
+        <p>وواحد آخر مستهدف بنفس الطريقة.</p>
+    </div>
+
+    <!-- Example 2: :where() -->
+    <div class="example">
+        <h2>:where() (تحديد بدون تأثير على الأولوية)</h2>
+        <p>يشبه <code>:is()</code> ولكنه لا يضيف أي أولوية (specificity):</p>
+        <div class="example-title">منسق بواسطة <code>:where()</code>.</div>
+        <p>وأيضًا مثال آخر لـ <code>:where()</code>.</p>
+    </div>
+
+    <!-- Example 3: :not() -->
+    <div class="example">
+        <h2>:not() (استثناء العناصر)</h2>
+        <p>هذا الـ Selector يستثني عناصر معينة:</p>
+        <div class="highlighted">غير مستهدف بواسطة <code>:not()</code>.</div>
+        <div>مستهدف بواسطة <code>:not()</code>.</div>
+    </div>
+
+    <!-- Example 4: :has() -->
+    <div class="example">
+        <h2>:has() (تحديد بناءً على العناصر الأبناء)</h2>
+        <p>يستهدف العناصر التي تحتوي على أبناء معينين:</p>
+        <div>
+            <ul>
+                <li>عنصر 1</li>
+                <li>عنصر 2</li>
+                <li>عنصر 3</li>
+            </ul>
+        </div>
+        <div>لا توجد عناصر أبناء هنا!</div>
+    </div>
+
+    <!-- Comparison Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>الـ Selector</th>
+                <th>الاستخدام</th>
+                <th>القوة (Specificity)</th>
+                <th>الدعم في المتصفحات</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:is()</td>
+                <td>تجميع عدة عناصر.</td>
+                <td>متوسطة</td>
+                <td>المتصفحات الحديثة</td>
+            </tr>
+            <tr>
+                <td>:where()</td>
+                <td>مثل :is() ولكن بدون أولوية.</td>
+                <td>منخفضة</td>
+                <td>المتصفحات الحديثة</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>استثناء عناصر محددة.</td>
+                <td>متوسطة</td>
+                <td>المتصفحات الحديثة</td>
+            </tr>
+            <tr>
+                <td>:has()</td>
+                <td>تحديد الآباء بناءً على الأبناء.</td>
+                <td>عالية</td>
+                <td>المتصفحات الحديثة</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
