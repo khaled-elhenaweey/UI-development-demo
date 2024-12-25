@@ -1,0 +1,145 @@
+body {
+  font-family: "poppins";
+}
+
+.table-container {
+  max-height: calc(50vh - 30px);
+  outline: 1px solid #c5c7c9;
+  border-radius: 4px;
+  overflow: overlay;
+  background-color: white;
+}
+.table-container .general-table {
+  width: 100%;
+  min-height: 225px;
+  text-align: start;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+.table-container .general-table.table-space {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+.table-container .general-table .table-header,
+.table-container .general-table .table-footer {
+  background-color: #ebeced;
+}
+.table-container .general-table .table-header tr th,
+.table-container .general-table .table-footer tr th {
+  padding: 16px;
+  color: black;
+  font-size: 14px !important;
+}
+.table-container .general-table .table-header {
+  border-bottom: 1px solid #c5c7c9;
+}
+.table-container .general-table .table-header.thead-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.table-container .general-table .table-footer {
+  border-top: 1px solid #c5c7c9;
+}
+.table-container .general-table .table-footer.tfoot-fixed {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+.table-container .general-table .table-body tr {
+  border-bottom: 1px solid #c5c7c9;
+}
+.table-container .general-table .table-body tr:last-child {
+  border-bottom: 0px solid transparent;
+}
+.table-container .general-table .table-body tr:hover {
+  background-color: #f1f1f2 !important;
+}
+.table-container .general-table .table-body tr td {
+  padding: 16px;
+  color: #656566;
+  font-size: 14px !important;
+}
+.table-container .general-table .table-body .no-data {
+  text-align: center;
+  font-weight: 600;
+}
+.table-container .general-table.table-even tr:nth-child(even) {
+  background-color: #fafafb;
+}
+.table-container .general-table.border-table tr th,
+.table-container .general-table.border-table tr td {
+  border-inline-end: 1px solid #d8d8d8 !important;
+}
+.table-container .general-table.border-table tr th:last-child,
+.table-container .general-table.border-table tr td:last-child {
+  border-inline-end: 0px solid transparent !important;
+}
+
+.block-container {
+  max-height: calc(100vh - 10px);
+  overflow: overlay;
+  padding-right: 4px;
+}
+.block-container .block-table {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.block-container .block-table .table-header {
+  background-color: white;
+}
+.block-container .block-table .table-header tr th {
+  padding: 14px;
+  color: #656566;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+}
+.block-container .block-table .table-header.thead-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.block-container .block-table .table-body tr:hover {
+  background-color: #FBFBFB;
+}
+.block-container .block-table .table-body tr td {
+  padding: 14px;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: start;
+  border-block: 2px solid #E0E0E0;
+}
+.block-container .block-table .table-body tr td:first-of-type {
+  border-left: 2px solid #E0E0E0;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.block-container .block-table .table-body tr td:last-of-type {
+  border-right: 2px solid #E0E0E0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=14-table.css.map */
